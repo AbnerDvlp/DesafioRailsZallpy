@@ -1,2 +1,28 @@
-<h1>Book#show</h1>
-<p>Find me in app/views/book/show.html.erb</p>
+<div class="panel">
+  <table class="table vert">
+    <tr>
+      <th>Id:</th>
+      <td><%= @book.id %></td>
+    </tr>
+    <tr>
+      <th>Title:</th>
+      <td><%= @book.title %></td>
+    </tr>
+    <tr>
+      <th>Synopsis:</th>
+      <td><%= @book.synopsis %></td>
+    </tr>
+    <tr>
+      <th>Genre:</th>
+      <td><%= @book.genre_id%></td>
+    </tr>
+    <tr>
+      <th>Value:</th>
+      <td><%= @book.value %></td>
+    </tr>
+    <tr>
+      <th>Number of pages:</th>
+      <td><%= @book.number_of_pages %></td>
+    </tr>
+  </table>
+</div>

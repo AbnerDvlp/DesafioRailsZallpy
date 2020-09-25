@@ -1,0 +1,29 @@
+<%= form_with(model: books, local: true) do |form| %>
+
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :synopsis %>
+    <%= form.text_field :synopsis %>
+  </div>
+
+  <div>
+    <%= form.label :value %>
+    <%= form.text_field :value %>
+  </div>
+
+  <div>
+    <%= form.label :number_of_pages %>
+    <%= form.text_field :number_of_pages %>
+  </div>
+
+  <div>
+    <%= form.label :genre %>
+    <%= form.collection_select(:genre_id, Genre.all, :id, :name) %>
+  </div>
+
+  <%= form.submit books.new_record? ? 'Add new book' : 'Edit Book', class: 'button' %>
+<% end %>

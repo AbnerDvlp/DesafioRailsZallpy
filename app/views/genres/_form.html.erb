@@ -1,0 +1,9 @@
+<%= form_with(model: genres, local: true) do |form| %>
+
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <%= form.submit genres.new_record? ? 'New genre' : 'Edit genre', class: 'button' %>
+<% end %>

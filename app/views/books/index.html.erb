@@ -1,2 +1,48 @@
-<h1>Book#index</h1>
-<p>Find me in app/views/book/index.html.erb</p>
+<div>
+  <table class="table">
+
+    <thead>
+    <tr>
+      <th>Id:</th>
+      <th>Title:</th>
+      <th>Synopsis:</th>
+      <th>Value:</th>
+      <th>Number of pages:</th>
+      <th>Genre:</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= book.id %></td>
+        <td><%= book.title %></td>
+        <td><%= book.synopsis %></td>
+        <td><%= book.value %></td>
+        <td><%= book.number_of_pages %></td>
+        <td><%= book.genre_id%></td>
+
+        <td style="text-align: right">
+          <%= link_to 'Delete Book', book, class: 'button', method: :delete, data: {confirm: 'Você tem certeza?'} %>
+          <%= link_to 'Edit Book', books_edit_path(book), class: 'button' %>
+          <%= link_to 'Show Book', book, class: 'button' %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+
+  </table>
+
+  <div class="panelT panelaligright">
+    <%= link_to 'Add new book', books_new_path, class: 'button' %>
+  </div>
+
+  <% if flash.count.positive? %>
+    <div class="panel">
+      <p id="notice">
+        <%= notice %>
+      </p>
+    </div>
+  <% end %>
+
+</div>
