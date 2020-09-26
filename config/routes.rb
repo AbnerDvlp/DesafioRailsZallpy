@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'books/create',to:'books#create', as: 'books_create'
   get 'books/update',to:'books#update', as: 'books_update'
   get 'books/destroy',to:'books#destroy', as: 'books_destroy'
-
+  get 'books/report',to:'books#report', as: 'books_report'
 
   get 'genres/index',to:'genres#index', as: 'genres_index'
   get 'genres/new',to:'genres#new', as: 'genres_new'

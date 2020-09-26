@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Book Catalog</title>
+    <title>Catalog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,7 +10,7 @@
   </head>
 
   <body>
-  <h1 class="header panel">Book Catalog</h1>
+  <h1 class="header panel">WEB Catalog </h1>
   <ul class="menu-container">
     <li class="menu-item">
       <%= link_to 'Books list', books_index_path %>
@@ -18,8 +18,8 @@
     <li class="menu-item">
       <%= link_to 'Genre list', genres_index_path %>
     </li>
-    li class="menu-item">
-    <%= link_to 'Report', genres_index_path %>
+    <li class="menu-item">
+    <%= link_to 'Report', books_report_path %>
     </li>
   </ul>
     <%= yield %>
