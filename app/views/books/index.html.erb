@@ -1,11 +1,10 @@
-<div>
+<div class="panel">
   <table class="table">
 
     <thead>
     <tr>
       <th>Id:</th>
       <th>Title:</th>
-      <th>Synopsis:</th>
       <th>Value:</th>
       <th>Number of pages:</th>
       <th>Genre:</th>
@@ -14,19 +13,21 @@
 
     <tbody>
     <% @books.each do |book| %>
+
+
       <tr>
         <td><%= book.id %></td>
         <td><%= book.title %></td>
-        <td><%= book.synopsis %></td>
         <td><%= book.value %></td>
         <td><%= book.number_of_pages %></td>
-        <td><%= book.genre_id%></td>
+        <td><%= book.genre.name %></td>
 
         <td style="text-align: right">
           <%= link_to 'Delete Book', book, class: 'button', method: :delete, data: {confirm: 'Você tem certeza?'} %>
           <%= link_to 'Edit Book', books_edit_path(book), class: 'button' %>
           <%= link_to 'Show Book', book, class: 'button' %>
         </td>
+
       </tr>
     <% end %>
     </tbody>

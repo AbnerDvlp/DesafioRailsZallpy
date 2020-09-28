@@ -90,7 +90,7 @@ class BooksController < ApplicationController
       aux_genre = Book.where(genre_id:book.genre_id)
 
       if aux_genre.length > aux_genre_2
-      @genero_mais_ultilizado = book.genre_id
+      @genero_mais_ultilizado = book.genre.name
       end
 
     end

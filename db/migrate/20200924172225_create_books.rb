@@ -5,6 +5,7 @@ class CreateBooks < ActiveRecord::Migration[6.0]
       t.string  :synopsis
       t.decimal :value
       t.integer :number_of_pages
+      t.references :genre
 
       t.timestamps
     end

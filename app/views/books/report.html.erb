@@ -1,32 +1,37 @@
 <div class="panel">
-  <table class="table vert">
-    <tr>
-      <th>Livro com maior numero de páginas:</th>
-      <td><%= @nome_maior_livro %></td>
-    </tr>
-    <tr>
-      <th>Livro mais caro:</th>
-      <td><%= @report_livro_mais_caro %></td>
-    </tr>
-    <tr>
-      <th>Total de livros do catalogo:</th>
-      <td><%= @report_total_de_livros %></td>
-    </tr>
-    <tr>
-      <th>Valor total dos livros:</th>
-      <td><%= @report_total_de_valor%></td>
-    </tr>
-    <tr>
-      <th>Total de páginas somadas:</th>
-      <td><%= @report_total_de_paginas%></td>
-    </tr>
-    <tr>
-      <th>Último Livro Catalogado:</th>
-      <td><%= @report_ultimo_livro.title %></td>
-    </tr>
-    <tr>
-      <th>Gênero mais utilizado:</th>
-      <td><%= @genero_mais_ultilizado %></td>
-    </tr>
-  </table>
+
+  <div class="panel">
+    <h2>Book with greater number of pages:</h2>
+    <div class="panel"><%= @nome_maior_livro %></div>
+  </div>
+  <div class="panel">
+    <h2>Most expensive book:</h2>
+    <div class="panel"><%= @report_livro_mais_caro %></div>
+  </div>
+
+  <div class="panel">
+    <h2>Total catalog books:</h2>
+    <div class="panel"><%= @report_total_de_livros %></div>
+  </div>
+
+  <div class="panel">
+    <h2>Total value of books:</h2>
+    <div class="panel"><%= @report_total_de_valor %></div>
+  </div>
+
+  <div class="panel">
+    <h2>Total pages added:</h2>
+    <div class="panel"><%= @report_total_de_paginas %></div>
+  </div>
+
+  <div class="panel">
+    <h2>Last Book Catalog:</h2>
+    <div class="panel"><%= @report_ultimo_livro.title %></div>
+  </div>
+
+  <div class="panel">
+    <h2>Most used genre:</h2>
+    <div class="panel"><%= @genero_mais_ultilizado %></div>
+  </div>
+
 </div>

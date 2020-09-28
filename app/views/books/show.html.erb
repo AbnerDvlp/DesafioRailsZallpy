@@ -1,28 +1,28 @@
 <div class="panel">
-  <table class="table vert">
-    <tr>
-      <th>Id:</th>
-      <td><%= @book.id %></td>
-    </tr>
-    <tr>
-      <th>Title:</th>
-      <td><%= @book.title %></td>
-    </tr>
-    <tr>
-      <th>Synopsis:</th>
-      <td><%= @book.synopsis %></td>
-    </tr>
-    <tr>
-      <th>Genre:</th>
-      <td><%= @book.genre_id%></td>
-    </tr>
-    <tr>
-      <th>Value:</th>
-      <td><%= @book.value %></td>
-    </tr>
-    <tr>
-      <th>Number of pages:</th>
-      <td><%= @book.number_of_pages %></td>
-    </tr>
-  </table>
+
+  <div class="panel">
+    <h2>Id:</h2>
+    <div class="panel"><%= @book.id %></div>
+  </div>
+  <div class="panel">
+    <h2>Title:</h2>
+    <div class="panel"><%= @book.title %></div>
+  </div>
+  <div class="panel">
+    <h2>Synopsis:</h2>
+    <div class="panel"><textarea readonly><%= @book.synopsis %></textarea></div>
+  </div>
+  <div class="panel">
+    <h2>Genre:</h2>
+    <div class="panel"> <%= @book.genre.name %> </div>
+  </div>
+  <div class="panel">
+    <h2>Value:</h2>
+    <div class="panel"> U$: <%= @book.value %></div>
+  </div>
+  <div class="panel">
+    <h2>Number of pages:</h2>
+    <div class="panel"> <%= @book.number_of_pages %> pag. </div>
+  </div>
+
 </div>
